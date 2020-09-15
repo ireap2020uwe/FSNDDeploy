@@ -8,7 +8,7 @@ import pytest
 import main
 
 SECRET = 'TestSecret'
-TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NjEzMDY3OTAsIm5iZiI6MTU2MDA5NzE5MCwiZW1haWwiOiJ3b2xmQHRoZWRvb3IuY29tIn0.IpM4VMnqIgOoQeJxUbLT-cRcAjK41jronkVrqRLFmmk'
+TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDEzOTU5NzIsIm5iZiI6MTYwMDE4NjM3MiwiZW1haWwiOiJ4aWFvanVuLmx1b0B1d2UuYWMudWsifQ.xNrQo9wRflv3JK_ecwkKsiP7pdnkglTZ9cVhJ99UBOc'
 EMAIL = 'wolf@thedoor.com'
 PASSWORD = 'huff-puff'
 
@@ -26,7 +26,7 @@ def test_health(client):
     response = client.get('/')
     assert response.status_code == 200
     assert response.json == 'Healthy'
-
+    
 
 def test_auth(client):
     body = {'email': EMAIL,
